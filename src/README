@@ -1,0 +1,39 @@
+利用Naive Bayes文本分类
+
+
+P(C|d)=P(C)*P(d|C)/P(d)
+d:文档
+C:类别
+
+P(C):类别C的先验概率;
+P(d|C):文档d在类别C中出现的概率;
+P(d):文档d在语料库中出现的概率,常数,忽略; P(d)=P(x1)P(x2)P(x3)...P(xn)
+P(C|d):已知文档d,属于类别C的概率;
+
+
+
+
+
+
+文件预处理:
+
+主文件夹/类别/docname.txt
+docname.txt 每行一个词
+
+
+
+
+1,训练：
+
+先验概率P(C):HashMap<Class,P>
+条件概率:
+先验概率P(C):HashMap<Class,P>
+条件概率:
+    词频信息:HashMap<Class,Map<word,count>>
+    P=count/n ; n为类别Class内总词数;
+    词语word的条件概率P(d|C):HashMap<Class,Map<word,P>>
+
+DocName.txt    "A B C D E F G H I J K L";
+
+构造HashMap<Class,<DocName,List<String>>>
+
