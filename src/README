@@ -17,6 +17,8 @@ P(C|d):已知文档d,属于类别C的概率;
 
 文件预处理:
 
+条件概率P(d|C):HashMap<Class,Map<word,P>>
+条件概率P(d|C):HashMap<Class,Map<word,P>>
 主文件夹/类别/docname.txt
 docname.txt 每行一个词
 
